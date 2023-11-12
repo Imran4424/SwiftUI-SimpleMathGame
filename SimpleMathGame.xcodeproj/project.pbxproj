@@ -11,6 +11,7 @@
 		1D28B0162B0121A200CA03D8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D28B0152B0121A200CA03D8 /* ContentView.swift */; };
 		1D28B0182B0121A400CA03D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D28B0172B0121A400CA03D8 /* Assets.xcassets */; };
 		1D28B01B2B0121A400CA03D8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D28B01A2B0121A400CA03D8 /* Preview Assets.xcassets */; };
+		1D28B0222B0149E900CA03D8 /* AnswerButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D28B0212B0149E900CA03D8 /* AnswerButtonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		1D28B0152B0121A200CA03D8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1D28B0172B0121A400CA03D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1D28B01A2B0121A400CA03D8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		1D28B0212B0149E900CA03D8 /* AnswerButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				1D28B0132B0121A200CA03D8 /* SimpleMathGameApp.swift */,
 				1D28B0152B0121A200CA03D8 /* ContentView.swift */,
+				1D28B0212B0149E900CA03D8 /* AnswerButtonView.swift */,
 				1D28B0172B0121A400CA03D8 /* Assets.xcassets */,
 				1D28B0192B0121A400CA03D8 /* Preview Content */,
 			);
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D28B0222B0149E900CA03D8 /* AnswerButtonView.swift in Sources */,
 				1D28B0162B0121A200CA03D8 /* ContentView.swift in Sources */,
 				1D28B0142B0121A200CA03D8 /* SimpleMathGameApp.swift in Sources */,
 			);

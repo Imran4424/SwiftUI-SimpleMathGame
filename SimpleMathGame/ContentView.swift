@@ -17,12 +17,77 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Text("Score: \(score)")
+                .font(.title)
+                .bold()
+            
+            Spacer()
+            
+            Text("\(firstNumber) + \(secondNumber)")
+                .font(.largeTitle)
+                .bold()
+            
+            HStack {
+                ForEach(0..<2) { index in
+                    Button {
+                        isCorrectAnswer(answer: choiceArray[index])
+                        generateAnswers()
+                    } label: {
+                        AnswerButtonView(answer: choiceArray[index])
+                    }
+                }
+            }
+            
+            HStack {
+                ForEach(2..<4) { index in
+                    Button {
+                        isCorrectAnswer(answer: choiceArray[index])
+                        generateAnswers()
+                    } label: {
+                        AnswerButtonView(answer: choiceArray[index])
+                    }
+                }
+            }
+            
+            Spacer()
         }
-        .padding()
+        .onAppear {
+            generateAnswers()
+        }
+    }
+}
+
+// MARK: - Game methods
+extension ContentView {
+    func generateAnswers() {
+        if score < 10 {
+            difficulty = 10
+        } else if score < 25 {
+            difficulty = 100
+        } else {
+            difficulty = 1000
+        }
+        
+        firstNumber = Int.random(in: 0...(difficulty / 2))
+        secondNumber = Int.random(in: 0...(difficulty / 2))
+        correctAnswer = firstNumber + secondNumber
+        
+        var ansList = [Int]()
+        
+        for _ in 0...2 {
+            ansList.append(Int.random(in: 0...difficulty))
+        }
+        
+        ansList.append(correctAnswer)
+        choiceArray = ansList.shuffled()
+    }
+    
+    func isCorrectAnswer(answer: Int) {
+        if answer == correctAnswer {
+            score += 1
+        } else {
+            score -= 1
+        }
     }
 }
 
